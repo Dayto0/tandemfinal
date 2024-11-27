@@ -1,0 +1,156 @@
+/* Общий стиль для body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Контейнер */
+.container {
+    background-color: white;
+    border-radius: 16px;
+    padding: 30px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+/* Заголовок */
+header {
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+header #brandTitle {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* Выбор языка (кнопка с флагом) */
+.language-selector {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    z-index: 10;
+}
+
+/* Кнопка флага */
+#language-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#language-button .flag {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Выпадающее меню */
+/* Контейнер для выпадающего меню */
+/* Контейнер для выпадающего меню */
+.dropdown-content {
+    display: none; /* Скрыто по умолчанию */
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+    border-radius: 8px;
+    padding: 0; /* Убираем лишние отступы */
+    margin: 0; /* Убираем отступы, которые могли бы вызывать пустое пространство */
+}
+
+/* Каждый пункт меню */
+.flag-option {
+    display: block; /* Элементы будут располагаться вертикально */
+    padding: 5px 0; /* Небольшие отступы вокруг флага */
+    cursor: pointer;
+    text-align: center; /* Центрируем флаг */
+}
+
+/* Флаги */
+.flag-option img {
+    width: 20px;
+    height: 20px;
+    margin: 0; /* Убираем отступы вокруг флагов */
+}
+
+
+
+
+
+.flag-option:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* Когда меню открыто */
+.dropdown-content.show {
+    display: block;
+}
+
+/* Меню */
+.menu {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.menu-item {
+    background-color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    width: 150px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 5px 0;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Карта */
+iframe {
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 2px solid #4CAF50;
+    width: 100%;
+    height: 300px;
+}
+
+/* Подвал */
+footer {
+    margin-top: 20px;
+    color: #4CAF50;
+    font-size: 14px;
+}
