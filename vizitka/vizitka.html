@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор цен печати визиток</title>
+    <link rel="stylesheet" href="vizitkastyle.css">
+</head>
+<body>
+<div class="container">
+    <h1 id="brandTitle">Тандем</h1>
+    <h2 id="sendingTitle">Калькулятор цен печати визиток</h2>
+
+    <div id="language-selector">
+        <img src="https://cdn-icons-png.flaticon.com/512/323/323300.png" alt="Русский" onclick="changeLanguage('ru')">
+        <img src="https://cdn-icons-png.flaticon.com/512/197/197516.png" alt="Հայերեն" onclick="changeLanguage('am')">
+        <img src="https://cdn-icons-png.flaticon.com/512/323/323310.png" alt="English" onclick="changeLanguage('en')">
+    </div>
+
+    <form>
+        <label id="materialLabel" for="material">Материал:</label>
+        <select id="material">
+            <option value="200">Тонкая бумага</option>
+            <option value="400">Толстая бумага</option>
+            <option value="500">Ламинированная бумага</option>
+        </select>
+
+        <label id="densityLabel" for="density">Плотность печати:</label>
+        <select id="density">
+            <option value="200">360 dpi</option>
+            <option value="300">600 dpi</option>
+            <option value="400">720 dpi</option>
+            <option value="500">1440 dpi</option>
+        </select>
+
+        <label id="widthLabel" for="width">Ширина (см):</label>
+        <input type="number" id="width" placeholder="Введите ширину (см)" required>
+
+        <label id="heightLabel" for="height">Высота (см):</label>
+        <input type="number" id="height" placeholder="Введите высоту (см)" required>
+
+
+
+        <label for="quantity">Количество:</label>
+        <input type="number" id="quantity" placeholder="Введите количество" required>
+
+        <button type="button" id="calculateBtn" onclick="calculatePrice()">Рассчитать</button>
+        <p id="result">Цена: </p>
+
+        <!-- Ввод имени -->
+        <input type="text" id="name" placeholder="Введите имя">
+
+        <!-- Ввод телефона -->
+        <input type="tel" id="phone" placeholder="Введите номер телефона">
+        <button type="button" id="sendBtn" onclick="sendOrder()">Зарегистрировать заказ</button>
+    </form>
+</div>
+
+<script src="vizitkascript.js"></script>
+</body>
+</html>
