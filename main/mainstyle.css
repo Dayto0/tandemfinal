@@ -154,3 +154,14 @@ footer {
     color: #4CAF50;
     font-size: 14px;
 }
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+/* Если нужно убрать обводку только для ссылок в меню */
+.menu-item a {
+    outline: none;
+    text-decoration: none;
+}
