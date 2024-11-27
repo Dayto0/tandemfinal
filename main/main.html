@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <div id="brandTitle">Тандем</div>
+        <p id="companyAddress">Адрес: Vagarshapat Kamo 10</p>
+        <p id="companyPhone">Телефон: +37444932510</p>
+    </header>
+
+    <div class="language-selector" id="language-selector">
+        <button id="language-button" onclick="toggleDropdown()">
+            <img src="https://cdn-icons-png.flaticon.com/512/323/323300.png" alt="Russian" class="flag">
+        </button>
+        <div class="dropdown-content" id="language-dropdown">
+            <div class="flag-option" onclick="changeLanguage('ru')">
+                <img src="https://cdn-icons-png.flaticon.com/512/323/323300.png" alt="Русский">
+            </div>
+            <div class="flag-option" onclick="changeLanguage('am')">
+                <img src="https://cdn-icons-png.flaticon.com/512/197/197516.png" alt="Armenian">
+            </div>
+            <div class="flag-option" onclick="changeLanguage('en')">
+                <img src="https://cdn-icons-png.flaticon.com/512/323/323310.png" alt="English">
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="menu">
+            <div class="menu-item">
+                <a href="../bigprint/bigprint.html">
+                    <img src="pic/bigprint.png" alt="Большая печать">
+                    <p>Большая печать</p>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="../menu/menu.html">
+                    <img src="pic/menu.png" alt="Печать меню">
+                    <p>Печать меню</p>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="../vizitka/vizitka.html">
+                    <img src="pic/vizitka.png" alt="Печать визиток">
+                    <p>Печать визиток</p>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="../backcall/callindex.html">
+                    <img src="pic/call.png" alt="Обратный звонок">
+                    <p id="backCall">Обратный звонок</p> <!-- Убедитесь, что элемент имеет id -->
+                </a>
+            </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d320.4992570690343!2d44.29922345820051!3d40.16188241760597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m3!3m2!1d40.1620832!2d44.2992314!4m0!5e0!3m2!1sru!2sam!4v1732735018887!5m2!1sru!2sam" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </main>
+
+    <footer>
+        <p>© 2024 Тандем</p>
+    </footer>
+</div>
+<script src="mainscript.js"></script>
+</body>
+</html>
