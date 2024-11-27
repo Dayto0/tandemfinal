@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Калькулятор печати</title>
+    <link rel="stylesheet" href="menustyle.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Выбор языка с флагами -->
+    <div id="language-selector">
+        <img src="https://cdn-icons-png.flaticon.com/512/323/323300.png" alt="Россия" onclick="changeLanguage('ru')" title="Русский">
+        <img src="https://cdn-icons-png.flaticon.com/512/197/197516.png" alt="Армения" onclick="changeLanguage('am')" title="Հայերեն">
+        <img src="https://cdn-icons-png.flaticon.com/512/323/323310.png" alt="Англия" onclick="changeLanguage('en')" title="English">
+    </div>
+
+    <h1 id="brandTitle">Tandem</h1> <!-- Новый заголовок бренда -->
+    <h2 id="sendingTitle">Калькулятор печати меню</h2>
+
+    <form>
+        <!-- Выбор материала -->
+        <label id="materialLabel">Материал:</label>
+        <select id="material">
+            <option value="200">Тонкая бумага</option>
+            <option value="400">Толстая бумага</option>
+            <option value="500">Ламинированная бумага</option>
+        </select>
+
+        <!-- Выбор типа печати -->
+        <label id="pageTypeLabel">Тип:</label>
+        <select id="pageType">
+            <option value="100">Одна страница</option>
+            <option value="200">Складывающаяся</option>
+        </select>
+
+        <!-- Выбор плотности печати -->
+        <label id="densityLabel">Плотность печати:</label>
+        <select id="density">
+            <option value="200">360 dpi</option>
+            <option value="300">600 dpi</option>
+            <option value="400">720 dpi</option>
+            <option value="500">1440 dpi</option>
+        </select>
+
+        <!-- Ввод ширины -->
+        <label id="widthLabel">Ширина (м):</label>
+        <input type="number" id="width" step="0.1" placeholder="Введите ширину">
+
+        <!-- Ввод высоты -->
+        <label id="heightLabel">Высота (м):</label>
+        <input type="number" id="height" step="0.1" placeholder="Введите высоту">
+
+        <!-- Ввод количества -->
+        <label id="quantityLabel">Количество:</label>
+        <input type="number" id="quantity" placeholder="Введите количество">
+
+        <!-- Кнопка расчета -->
+        <button type="button" id="calculateBtn" onclick="calculatePrice()">Рассчитать</button>
+
+        <!-- Результат расчета -->
+        <div id="result">Цена: </div>
+
+        <!-- Ввод имени -->
+        <input type="text" id="name" placeholder="Введите имя">
+
+        <!-- Ввод телефона -->
+        <input type="tel" id="phone" placeholder="Введите номер телефона">
+
+        <!-- Кнопка отправки заказа -->
+        <button type="button" id="sendBtn" onclick="sendOrder()">Зарегистрировать заказ</button>
+    </form>
+</div>
+
+<script src="menuscript.js"></script>
+</body>
+</html>
