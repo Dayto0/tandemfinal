@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Обратный звонок</title>
+    <link rel="stylesheet" href="callstyle.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Выбор языка с флагами внутри контейнера -->
+    <div id="language-selector">
+        <img src="https://cdn-icons-png.flaticon.com/512/323/323300.png" alt="Россия" onclick="changeLanguage('ru')" title="Русский">
+        <img src="https://cdn-icons-png.flaticon.com/512/197/197516.png" alt="Армения" onclick="changeLanguage('am')" title="Հայերեն">
+        <img src="https://cdn-icons-png.flaticon.com/512/323/323310.png" alt="Англия" onclick="changeLanguage('en')" title="English">
+    </div>
+    <h1 id="brandTitle">Tandem</h1> <!-- Новый заголовок бренда -->
+    <h2 id="sendingTitle">Обратный звонок</h2> <!-- Заголовок формы -->
+
+    <!-- Форма -->
+    <form>
+        <!-- Ввод имени -->
+        <input type="text" id="name" placeholder="Введите имя">
+
+        <!-- Ввод телефона -->
+        <input type="tel" id="phone" placeholder="Введите номер телефона">
+
+        <!-- Кнопка отправки -->
+        <button type="button" id="sendBtn" onclick="sendOrder()">
+            Заказать обратный звонок
+        </button>
+    </form>
+</div>
+
+<script src="callscript.js"></script>
+</body>
+</html>
