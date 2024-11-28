@@ -1,16 +1,15 @@
 /* Общий стиль для body */
-/* Общий стиль для body */
-/* Общий стиль для body */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    /* Устанавливаем 100% высоты для body */
-    height: 100vh; /* 100% высоты экрана */
+    /* Используем flexbox для центрирования по горизонтали и вертикали */
     display: flex;
     justify-content: center; /* Центрируем по горизонтали */
     align-items: center; /* Центрируем по вертикали */
+    height: 100vh; /* Высота экрана */
+    overflow: hidden; /* Отключаем прокрутку для body */
 }
 
 /* Контейнер */
@@ -25,11 +24,8 @@ body {
     position: relative;
     overflow: auto; /* Позволяет прокручивать контейнер */
     margin: 0; /* Убираем внешние отступы */
-
+    max-height: 90vh; /* Ограничиваем высоту контейнера, чтобы он не выходил за экран */
 }
-
-
-
 
 /* Заголовок */
 header {
@@ -66,8 +62,6 @@ header #brandTitle {
 }
 
 /* Выпадающее меню */
-/* Контейнер для выпадающего меню */
-/* Контейнер для выпадающего меню */
 .dropdown-content {
     display: none; /* Скрыто по умолчанию */
     position: absolute;
@@ -77,35 +71,27 @@ header #brandTitle {
     z-index: 1;
     right: 0;
     border-radius: 8px;
-    padding: 0; /* Убираем лишние отступы */
-    margin: 0; /* Убираем отступы, которые могли бы вызывать пустое пространство */
+    padding: 0;
+    margin: 0;
 }
 
-/* Каждый пункт меню */
 .flag-option {
-    display: block; /* Элементы будут располагаться вертикально */
-    padding: 5px 0; /* Небольшие отступы вокруг флага */
+    display: block;
+    padding: 5px 0;
     cursor: pointer;
-    text-align: center; /* Центрируем флаг */
+    text-align: center;
 }
 
-/* Флаги */
 .flag-option img {
     width: 20px;
     height: 20px;
-    margin: 0; /* Убираем отступы вокруг флагов */
+    margin: 0;
 }
-
-
-
-
 
 .flag-option:hover {
     background-color: #f1f1f1;
 }
 
-
-/* Когда меню открыто */
 .dropdown-content.show {
     display: block;
 }
@@ -163,6 +149,7 @@ footer {
     color: #4CAF50;
     font-size: 14px;
 }
+
 a {
     outline: none;
     text-decoration: none;
