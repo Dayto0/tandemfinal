@@ -1,18 +1,18 @@
 const translations = {
     ru: {
-        brandTitle: "Тандем",
+        brandTitle: "ТАН•ДЕМ",
         sendingTitle: "Обратный звонок", // Изменено на "Калькулятор цен меню"
         namePlaceholder: "Введите имя",
         phonePlaceholder: "Введите номер телефона",
     },
     am: {
-        brandTitle: "Տանդեմ",
-        sendingTitle: "Մեծ տպագրություն", // Перевод на армянский
+        brandTitle: "ՏԱՆ•ԴԵՄ",
+        sendingTitle: "Հետ Հեռախոսազանգ", // Перевод на армянский
         namePlaceholder: "Մուտքագրեք անունը",
         phonePlaceholder: "Հետադարձ հեռախոսազանգ",
     },
     en: {
-        brandTitle: "Tandem",
+        brandTitle: "TAN•DEM",
         sendingTitle: "Back Call", // Перевод на английский
         result: "Price: ",
         namePlaceholder: "Enter name",
