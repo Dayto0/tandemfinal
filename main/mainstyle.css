@@ -9,7 +9,7 @@ body {
     justify-content: center; /* Центрируем по горизонтали */
     align-items: center; /* Центрируем по вертикали */
     height: 100vh; /* Высота экрана */
-    overflow: hidden; /* Отключаем прокрутку для body */
+    overflow: auto; /* Разрешаем прокрутку страницы */
 }
 
 /* Контейнер */
