@@ -1,6 +1,6 @@
 const translations = {
     ru: {
-        brandTitle: "Тандем",
+        brandTitle: "ТАН•ДЕМ",
         sendingTitle: "Калькулятор цен печати меню", // Изменено на "Калькулятор цен меню"
         widthLabel: "Ширина (см):",
         heightLabel: "Высота (см):",
@@ -15,7 +15,7 @@ const translations = {
         heightPlaceholder: "Введите высоту (см)"
     },
     am: {
-        brandTitle: "Տանդեմ",
+        brandTitle: "ՏԱՆ•ԴԵՄ",
         sendingTitle: "Մենյուի Գնի հաշվարկում ", // Перевод на армянский
         widthLabel: "Լայնություն (սմ):",
         heightLabel: "Բարձրություն (սմ):",
@@ -30,7 +30,7 @@ const translations = {
         heightPlaceholder: "Մուտքագրեք բարձրությունը (սմ)"
     },
     en: {
-        brandTitle: "Tandem",
+        brandTitle: "TAN•DEM",
         sendingTitle: "Menu Printing Price Calculator", // Перевод на английский
         widthLabel: "Width (cm):",
         heightLabel: "Height (cm):",
