@@ -1,59 +1,69 @@
-let currentLanguage = 'am'; // Начальный язык
+// Объект переводов
+const translations = {
+    ru: {
+        brandTitle: "ТАН•ДЕМ",
+        companyAddress: "Адрес: Vagarshapat Kamo 10",
+        companyPhone: "Телефон: +37444932510",
+        bigPrint: "Большая печать",
+        menuPrint: "Печать меню",
+        businessCardPrint: "Печать визиток",
+        backCall: "Обратный звонок"
+    },
+    am: {
+        brandTitle: "ՏԱՆ•ԴԵՄ",
+        companyAddress: "Հասցե: Vagarshapat Kamo 10",
+        companyPhone: "Հեռախոս: +37444932510",
+        bigPrint: "Մեծ Տպագրություն",
+        menuPrint: "Մենյուի Տպագրություն",
+        businessCardPrint: "Այցեքարտերի տպագրություն",
+        backCall: "Հետադարձ հեռախոսազանգ"
+    },
+    en: {
+        brandTitle: "TAN•DEM",
+        companyAddress: "Address: Vagarshapat Kamo 10",
+        companyPhone: "Phone: +37444932510",
+        bigPrint: "Big Print",
+        menuPrint: "Menu Printing",
+        businessCardPrint: "Business Card Printing",
+        backCall: "Back Call"
+    }
+};
 
-// Переключение языка при клике на флаг
+// Текущий язык
+let currentLanguage = 'am'; // Язык по умолчанию
+
+// Функция смены языка
 function changeLanguage(language) {
     currentLanguage = language;
-    updateText(); // Обновление текста на странице в зависимости от выбранного языка
-    closeDropdown(); // Закрытие выпадающего меню
-    updateFlag(language); // Обновление флага
-}
-
-// Обновление текста на странице в зависимости от текущего языка
-function updateText() {
-    const translations = {
-        'ru': {
-            'brandTitle': 'Тандем',
-            'companyAddress': 'Адрес: Vagarshapat Kamo 10',
-            'companyPhone': 'Телефон: +37444932510',
-            'bigPrint': 'Большая печать',
-            'menuPrint': 'Печать меню',
-            'businessCardPrint': 'Печать визиток',
-            'backCall': 'Обратный звонок'  // Перевод для кнопки
-        },
-        'en': {
-            'brandTitle': 'Tandem',
-            'companyAddress': 'Address: Vagarshapat Kamo 10',
-            'companyPhone': 'Phone: +37444932510',
-            'bigPrint': 'Big Print',
-            'menuPrint': 'Menu Printing',
-            'businessCardPrint': 'Business Card Printing',
-            'backCall': 'Back Call'  // Перевод для кнопки
-        },
-        'am': {
-            'brandTitle': 'Տանդեմ',
-            'companyAddress': 'Հասցե: Vagarshapat Kamo 10',
-            'companyPhone': 'Հեռախոս: +37444932510',
-            'bigPrint': 'Մեծ Տպագրություն',
-            'menuPrint': 'Մենյուի Տպագրություն',
-            'businessCardPrint': 'Այցեքարտերի տպագրություն',
-            'backCall': 'Հետադարձ հեռախոսազանգ'  // Перевод для кнопки
-        }
-    };
-
-    // Применение перевода для всех элементов
-    document.getElementById('brandTitle').textContent = translations[currentLanguage].brandTitle;
-    document.getElementById('companyAddress').textContent = translations[currentLanguage].companyAddress;
-    document.getElementById('companyPhone').textContent = translations[currentLanguage].companyPhone;
-    document.querySelector('.menu .menu-item:nth-child(1) p').textContent = translations[currentLanguage].bigPrint;
-    document.querySelector('.menu .menu-item:nth-child(2) p').textContent = translations[currentLanguage].menuPrint;
-    document.querySelector('.menu .menu-item:nth-child(3) p').textContent = translations[currentLanguage].businessCardPrint;
+    document.getElementById("brandTitle").innerText = translations[language].brandTitle;
+    document.getElementById("companyAddress").innerText = translations[language].companyAddress;
+    document.getElementById("companyPhone").innerText = translations[language].companyPhone;
+    document.querySelector(".menu .menu-item:nth-child(1) p").innerText = translations[language].bigPrint;
+    document.querySelector(".menu .menu-item:nth-child(2) p").innerText = translations[language].menuPrint;
+    document.querySelector(".menu .menu-item:nth-child(3) p").innerText = translations[language].businessCardPrint;
 
     // Обновляем текст кнопки "Обратный звонок"
-    const backCallButton = document.getElementById('backCall');
+    const backCallButton = document.getElementById("backCall");
     if (backCallButton) {
-        backCallButton.textContent = translations[currentLanguage].backCall;
+        backCallButton.innerText = translations[language].backCall;
     }
+
+    // Обновляем флаг
+    updateFlag(language);
 }
+
+// Функция обновления флага
+function updateFlag(language) {
+    const flagMap = {
+        ru: "https://cdn-icons-png.flaticon.com/512/323/323300.png",
+        en: "https://cdn-icons-png.flaticon.com/512/323/323310.png",
+        am: "https://cdn-icons-png.flaticon.com/512/197/197516.png"
+    };
+    document.getElementById("language-button").querySelector(".flag").src = flagMap[language];
+}
+
+// Сразу устанавливаем язык до отображения содержимого
+changeLanguage(currentLanguage);
 
 // Обновление флага
 function updateFlag(language) {
