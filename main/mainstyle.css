@@ -1,13 +1,16 @@
 /* Общий стиль для body */
+/* Общий стиль для body */
+/* Общий стиль для body */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    /* Устанавливаем 100% высоты для body */
+    height: 100vh; /* 100% высоты экрана */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
 }
 
 /* Контейнер */
@@ -20,7 +23,13 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
+    overflow: auto; /* Позволяет прокручивать контейнер */
+    margin: 0; /* Убираем внешние отступы */
+
 }
+
+
+
 
 /* Заголовок */
 header {
@@ -154,7 +163,6 @@ footer {
     color: #4CAF50;
     font-size: 14px;
 }
-
 a {
     outline: none;
     text-decoration: none;
