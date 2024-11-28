@@ -1,6 +1,6 @@
 const translations = {
     ru: {
-        brandTitle: "Тандем",
+        brandTitle: "ТАН•ДЕМ",
         sendingTitle: "Калькулятор цен печати визиток",
         widthLabel: "Ширина (см):",
         heightLabel: "Высота (см):",
@@ -16,7 +16,7 @@ const translations = {
         quantityPlaceholder: "Введите количество"
     },
     am: {
-        brandTitle: "Տանդեմ",
+        brandTitle: "ՏԱՆ•ԴԵՄ",
         sendingTitle: "Վիզիտների տպման գնի հաշվարկիչ",
         widthLabel: "Լայնություն (սմ):",
         heightLabel: "Բարձրություն (սմ):",
@@ -32,7 +32,7 @@ const translations = {
         quantityPlaceholder: "Մուտքագրեք քանակը"
     },
     en: {
-        brandTitle: "Tandem",
+        brandTitle: "TAN•DEM",
         sendingTitle: "Business Card Printing Price Calculator",
         widthLabel: "Width (cm):",
         heightLabel: "Height (cm):",
