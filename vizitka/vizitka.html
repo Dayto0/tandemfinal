@@ -8,14 +8,16 @@
 </head>
 <body>
 <div class="container">
+
     <h1 id="brandTitle">Тандем</h1>
+    <div id="language-selector">
+        <img src="https://cdn-icons-png.flaticon.com/512/323/323300.png" alt="Россия" onclick="changeLanguage('ru')" title="Русский" class="language-flag" id="ru-flag">
+        <img src="https://cdn-icons-png.flaticon.com/512/197/197516.png" alt="Армения" onclick="changeLanguage('am')" title="Հայերեն" class="language-flag" id="am-flag">
+        <img src="https://cdn-icons-png.flaticon.com/512/323/323310.png" alt="Англия" onclick="changeLanguage('en')" title="English" class="language-flag" id="en-flag">
+    </div>
     <h2 id="sendingTitle">Калькулятор цен печати визиток</h2>
 
-    <div id="language-selector">
-        <img src="https://cdn-icons-png.flaticon.com/512/323/323300.png" alt="Русский" onclick="changeLanguage('ru')">
-        <img src="https://cdn-icons-png.flaticon.com/512/197/197516.png" alt="Հայերեն" onclick="changeLanguage('am')">
-        <img src="https://cdn-icons-png.flaticon.com/512/323/323310.png" alt="English" onclick="changeLanguage('en')">
-    </div>
+
 
     <form>
         <label id="materialLabel" for="material">Материал:</label>
