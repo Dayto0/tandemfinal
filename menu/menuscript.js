@@ -64,8 +64,19 @@ function changeLanguage(language) {
     document.getElementById("phone").placeholder = translations[language].phonePlaceholder;
     document.getElementById("width").placeholder = translations[language].widthPlaceholder;
     document.getElementById("height").placeholder = translations[language].heightPlaceholder;
+
+    updateActiveFlag(language);
 }
 
+function updateActiveFlag(language) {
+    // Скрываем все флаги
+    document.getElementById('ru-flag').style.opacity = 0.5;
+    document.getElementById('am-flag').style.opacity = 0.5;
+    document.getElementById('en-flag').style.opacity = 0.5;
+
+    // Показываем активный флаг
+    document.getElementById(`${language}-flag`).style.opacity = 1;
+}
 // Устанавливаем язык по умолчанию
 changeLanguage('am'); // по умолчанию армянский
 
