@@ -47,9 +47,11 @@ function changeLanguage(language) {
     if (backCallButton) {
         backCallButton.innerText = translations[language].backCall;
     }
-
     // Обновляем флаг
     updateFlag(language);
+
+    // Закрываем dropdown после смены языка
+    closeDropdown();
 }
 
 // Функция обновления флага
@@ -59,40 +61,32 @@ function updateFlag(language) {
         en: "https://cdn-icons-png.flaticon.com/512/323/323310.png",
         am: "https://cdn-icons-png.flaticon.com/512/197/197516.png"
     };
-    document.getElementById("language-button").querySelector(".flag").src = flagMap[language];
+    document.getElementById("Dropdown").querySelector(".flag").src = flagMap[language];
 }
 
 // Сразу устанавливаем язык до отображения содержимого
 changeLanguage(currentLanguage);
 
-// Обновление флага
-function updateFlag(language) {
-    const flagMap = {
-        'ru': 'https://cdn-icons-png.flaticon.com/512/323/323300.png',
-        'en': 'https://cdn-icons-png.flaticon.com/512/323/323310.png',
-        'am': 'https://cdn-icons-png.flaticon.com/512/197/197516.png'
-    };
-    document.getElementById('language-button').querySelector('.flag').src = flagMap[language];
-}
-
-// Открытие выпадающего меню
-function toggleDropdown() {
-    const dropdown = document.getElementById('language-dropdown');
-    dropdown.classList.toggle('show');
-}
-
-// Закрытие выпадающего меню
-function closeDropdown() {
-    const dropdown = document.getElementById('language-dropdown');
-    dropdown.classList.remove('show');
-}
-
 // Закрытие меню, если пользователь кликнул вне меню
 window.onclick = function(event) {
-    const dropdown = document.getElementById('language-dropdown');
+    const dropdown = document.getElementById('Dropdown');
     const button = document.getElementById('language-button');
-
     if (!button.contains(event.target) && !dropdown.contains(event.target)) {
         closeDropdown();
     }
 }
+
+// Закрытие меню
+function closeDropdown() {
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    if (dropdownMenu) {
+        dropdownMenu.classList.remove('show');
+    }
+}
+
+// Открытие выпадающего меню
+document.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', function(event) {
+        event.stopPropagation(); // Предотвращаем закрытие меню при клике внутри
+    });
+});
