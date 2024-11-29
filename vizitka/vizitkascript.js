@@ -17,7 +17,7 @@ const translations = {
     },
     am: {
         brandTitle: "ՏԱՆ•ԴԵՄ",
-        sendingTitle: "Վիզիտների տպման գնի հաշվարկիչ",
+        sendingTitle: "Վիզիտկաների տպման գնի հաշվարկիչ",
         widthLabel: "Լայնություն (սմ):",
         heightLabel: "Բարձրություն (սմ):",
         materialLabel: "Մատերիալ:",
@@ -65,10 +65,22 @@ function changeLanguage(language) {
     document.getElementById("width").placeholder = translations[language].widthPlaceholder;
     document.getElementById("height").placeholder = translations[language].heightPlaceholder;
     document.getElementById("quantity").placeholder = translations[language].quantityPlaceholder;
+    updateActiveFlag(language);
 }
+
 
 // Устанавливаем язык по умолчанию
 changeLanguage('am'); // по умолчанию русский
+
+function updateActiveFlag(language) {
+    // Скрываем все флаги
+    document.getElementById('ru-flag').style.opacity = 0.5;
+    document.getElementById('am-flag').style.opacity = 0.5;
+    document.getElementById('en-flag').style.opacity = 0.5;
+
+    // Показываем активный флаг
+    document.getElementById(`${language}-flag`).style.opacity = 1;
+}
 
 // Функция для расчёта стоимости
 function calculatePrice() {
