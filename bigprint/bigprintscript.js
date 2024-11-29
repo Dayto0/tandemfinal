@@ -31,7 +31,7 @@ const translations = {
     },
     en: {
         brandTitle: "TAN•DEM",
-        sendingTitle: "PigPrinting", // Перевод на английский
+        sendingTitle: "Pig Printing", // Перевод на английский
         widthLabel: "Width (m):",
         heightLabel: "Height (m):",
         materialLabel: "Material:",
@@ -64,6 +64,17 @@ function changeLanguage(language) {
     document.getElementById("phone").placeholder = translations[language].phonePlaceholder;
     document.getElementById("width").placeholder = translations[language].widthPlaceholder;
     document.getElementById("height").placeholder = translations[language].heightPlaceholder;
+
+    updateActiveFlag(language);
+}
+function updateActiveFlag(language) {
+    // Скрываем все флаги
+    document.getElementById('ru-flag').style.opacity = 0.5;
+    document.getElementById('am-flag').style.opacity = 0.5;
+    document.getElementById('en-flag').style.opacity = 0.5;
+
+    // Показываем активный флаг
+    document.getElementById(`${language}-flag`).style.opacity = 1;
 }
 
 // Устанавливаем язык по умолчанию
@@ -102,6 +113,8 @@ function calculatePrice() {
     const resultText = `От ${minPrice} до ${maxPrice} драм.`;
     document.getElementById('result').innerText = resultText;
 }
+
+
 
 // Функция для отправки данных на Telegram
 function sendOrder() {
