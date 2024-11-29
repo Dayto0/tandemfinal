@@ -10,13 +10,15 @@
 
 <div class="container">
     <!-- Выбор языка с флагами внутри контейнера -->
-    <div id="language-selector">
-        <img src="https://cdn-icons-png.flaticon.com/512/323/323300.png" alt="Россия" onclick="changeLanguage('ru')" title="Русский">
-        <img src="https://cdn-icons-png.flaticon.com/512/197/197516.png" alt="Армения" onclick="changeLanguage('am')" title="Հայերեն">
-        <img src="https://cdn-icons-png.flaticon.com/512/323/323310.png" alt="Англия" onclick="changeLanguage('en')" title="English">
-    </div>
+        <!-- Выбор языка с флагами внутри контейнера -->
+
     <h1 id="brandTitle">Tandem</h1> <!-- Новый заголовок бренда -->
     <!-- Заголовок, который будет изменяться в зависимости от языка -->
+    <div id="language-selector">
+        <img src="https://cdn-icons-png.flaticon.com/512/323/323300.png" alt="Россия" onclick="changeLanguage('ru')" title="Русский" class="language-flag" id="ru-flag">
+        <img src="https://cdn-icons-png.flaticon.com/512/197/197516.png" alt="Армения" onclick="changeLanguage('am')" title="Հայերեն" class="language-flag" id="am-flag">
+        <img src="https://cdn-icons-png.flaticon.com/512/323/323310.png" alt="Англия" onclick="changeLanguage('en')" title="English" class="language-flag" id="en-flag">
+    </div>
     <h2 id="sendingTitle">Большая печать</h2>
 
     <form>
