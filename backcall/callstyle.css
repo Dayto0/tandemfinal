@@ -59,7 +59,6 @@ button:hover {
     background-color: #45a049; /* Немного темнее зеленый при наведении */
 }
 
-
 /* Стили для флага языка */
 #language-selector {
     display: flex;
@@ -68,11 +67,17 @@ button:hover {
     margin-bottom: 20px;
 }
 
-/* Стили для флага */
-#language-selector img {
-    width: 30px;
-    height: 30px;
+/* Стили для флагов */
+.language-flag {
+    width: 40px;
+    height: 40px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Эффект при наведении на флаг */
+.language-flag:hover {
+    transform: scale(1.1);
 }
 
 /* Центрирование всех элементов внутри контейнера */
